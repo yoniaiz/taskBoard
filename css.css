@@ -1,0 +1,259 @@
+#title {
+    width: 100%;
+    position: relative;
+    left: -6%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#txtArea {
+    background-image: url(./formbg.jpg);
+    background-position: left center;
+    background-repeat: round;
+    width: 100%;
+    height: 280px;
+    padding-top: 25px;
+    padding-left: 90px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 23px;
+    color: black;
+    line-height: 1.50;
+    stroke: #7f7f4c;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+
+
+.btn {
+    width: 48.2%;
+    outline: none !important;
+
+}
+
+.btn:focus {
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+    padding: 10px;
+    background: #9a99ff;
+    color: #feff99;
+    min-width: 50px;
+    text-align: center;
+    position: relative;
+    left: 5px;
+    z-index: 500;
+}
+
+/* Style the input fields */
+.input-field {
+    width: 100%;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 3.5px solid #9a99ff;
+    outline: none;
+  -webkit-box-shadow: none !important;
+
+}
+
+
+.note {
+    background-image: url(./notebg.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    float: left;
+
+}
+
+.number {
+    font-size: 43px;
+    position: absolute;
+    text-align: center;
+    font-family: 'Pinyon Script', cursive;
+    color: #cbcc7a;
+    font-weight: bold;
+
+}
+
+#icon {
+    font-size: 30px;
+    color: #7f7f4c;
+    left: 54%;
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transition: 1s;
+}
+
+#icon1 {
+    font-size: 30px;
+    color: #7f7f4c;
+    position: relative;
+    left: 5%;
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transition: 1s;
+}
+
+
+.note:hover #icon {
+    opacity: 1;
+}
+
+.note:hover #icon1 {
+    opacity: 1;
+}
+
+#icon:hover {
+    color: #fd8181;
+}
+
+#icon1:hover {
+    color: #beff95;
+}
+
+.Notetextarea {
+    margin-top: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Charm', cursive;
+    color: #4c4c2d;
+    font-size: 23px;
+    overflow: hidden;
+    resize: none;
+}
+
+.Notetextarea:hover {
+    overflow: auto;
+}
+
+
+textarea::-webkit-scrollbar {
+    width: 9px;
+    background-color: none;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #9a99ff;
+}
+
+/* Tooltip text */
+#icon1 .tooltiptext {
+    width: 120px;
+    bottom: 140%;
+    left: 50%;
+    margin-left: -60px;
+    /* Use half of the width (120/2 = 60), to center the tooltip */
+    background-color: #beff95;
+    color: #ffffe6;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 600;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+#icon1:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tooltip text */
+#icon .tooltiptext {
+    width: 120px;
+    bottom: 140%;
+    left: 50%;
+    background-color: #fd8181;
+    color: #ffffe6;
+    text-align: center;
+    margin-left: -60px;
+    /* Use half of the width (120/2 = 60), to center the tooltip */
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 600;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+#icon:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* faild save */
+.failure {
+    color: #ffffe6;
+    background-color: #fd8181;
+    opacity: 0.8;
+    width: 39vw;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    z-index: 111;
+}
+/* succsescd save */
+.saved {
+    color: #beff95;
+    opacity: 0.8;
+    width: 39vw;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 100px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    left: 30%;
+    top: 30%;
+    z-index: 999;
+}
+/* cancel save */
+.canceled {
+    color: #fd8181;
+    opacity: 0.8;
+    width: 39vw;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 100px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    left: 30%;
+    top: 30%;
+    z-index: 999;
+}
